@@ -279,6 +279,8 @@ section
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
     gap: 3vmin;
     font-family: "poppins";
     width: 60vmin;
