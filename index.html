@@ -5,72 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Mohamed Athif | Portfolio</title>
-
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-                publicKey: "-bq4vYop5xGOXx0ug",
-            });
-        })();
-    </script>
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-bq4vYop5xGOXx0ug",
+      });
+   })();
+</script>
+
 </head>
 <body>
-
     <nav>
         <h2>Mohamed Athif</h2>
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <ul>
+            <li>
+                <a href="#home">Home</a> </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
+           
+        </ul>
+        <div class="hamburger" onclick="shownav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
-        <ul class="nav-links">
-            <li><a href="#home">Home</a> </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contacts</a></li>
+    </nav>
+    <nav class="mobile-nav">
+        <ul>
+            <li>
+                <a href="#home">Home</a> </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
         </ul>
     </nav>
-
-    <div class="menu-overlay">
-        <ul>
-            <li><a href="#home">Home</a> </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contacts</a></li>
-        </ul>
-    </div>
-
-    <br><br>
-
+    <br>
+    <br>
     <div class="main-section">
         <section id="home">
             <h2>Hi I'm Mohamed Athif</h2>
             <p>A passionate web developer</p>
             <a href="#projects" id="view">View My Work</a>
         </section>
-
         <section id="about">
             <div id="about-content">
                 <h2>About Me</h2>
-                <p>I'm a passionate web developer in the making, currently mastering full stack development.
-                I love turning ideas into interactive, functional designs - clean code and problem solving
-                are my favourite combo.</p>
+                <p>I'm a passionate web developer in the making, currently mastering full stack development. I love turning<br>
+                ideas into interactive, functional designs - clean code and problem solving are my favourite combo.
+            </p>
             </div>
             <div id="about-image">
                 <img src="images/athif.jpg" alt="" class="about-image-content">
             </div>
         </section>
-
         <section id="projects">
             <h2 class="project-title">Projects</h2>
             <div class="project-container">
-                <div class="project-card stagger-1"
-                    onclick="window.open('https://github.com/MohamedAthif2005/NLP-Projects/tree/main/spam%20classifier','_blank');">
+                <div class="project-card stagger-1" onclick="window.open('https://github.com/MohamedAthif2005/NLP-Projects/tree/main/spam%20classifier','_blank');">
                     <h3>SMS Spam Classifier</h3>
                     <p>Detects spam messages with the help of NLP</p>
                 </div>
@@ -80,23 +75,21 @@
                 </div>
             </div>
         </section>
-
         <section id="contact">
             <h2 class="contact-title">Contact Me</h2>
-            <form class="contact-form">
+            <form action="#" class="contact-form">
                 <input type="text" name="name" placeholder="Enter your name" autocomplete="off" id="name">
-                <input type="email" name="email" placeholder="Enter your email" autocomplete="off" id="email">
+                <input type="email" placeholder="Enter your email" autocomplete="off" name="email" id="email">
                 <textarea name="message" id="message" placeholder="Enter message" autocomplete="off"></textarea>
-                <button type="button" onclick="sendMail()">Send</button>
+                <button type="submit">send</button>
                 <p class="type"></p>
             </form>
         </section>
     </div>
-
     <footer>
         Copyright &copy; 2025 Curiosity is the key to ideas
     </footer>
-
     <script src="script.js"></script>
 </body>
+
 </html>

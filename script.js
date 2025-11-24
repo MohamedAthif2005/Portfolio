@@ -5,22 +5,36 @@ function sendMail(){
         message:document.getElementById("message").value
     }
     emailjs.send("service_7ucxofz","template_a639kg9",params)
-    .then(() => alert("Email sent successfully"))
+    .then(() => sent())
     .catch(() => alert("Something went wrong"));
 }
+const form = document.querySelector(".contact-form");
 
-const ham = document.querySelector(".hamburger");
-const overlay = document.querySelector(".menu-overlay");
-const overlayLinks = document.querySelectorAll(".menu-overlay a");
-
-ham.addEventListener("click", () => {
-    ham.classList.toggle("active");
-    overlay.classList.toggle("active");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendMail();         
 });
+function sent() {
+    const type = document.querySelector(".type");
 
-overlayLinks.forEach(link => {
+    type.textContent = "Email Sent Successfully 😊";
+
+    setTimeout(() => {
+        type.textContent = "";
+    }, 3000);
+    form.reset();
+}
+function shownav()
+{
+    const ham = document.querySelector(".mobile-nav");
+    ham.classList.toggle("active");
+}
+
+const mobilenav = document.querySelector(".mobile-nav");
+const navlinks = document.querySelectorAll(".mobile-nav ul li a");
+
+navlinks.forEach(link => {
     link.addEventListener("click", () => {
-        ham.classList.remove("active");
-        overlay.classList.remove("active");
+        mobilenav.classList.remove("active");
     });
 });
