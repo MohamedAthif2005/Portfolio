@@ -447,5 +447,9 @@ section
     {
         height: 8vmin;
     }
+    .project-card h2
+    {
+        font-size: 1.5vmin;
+    }
 
 }
