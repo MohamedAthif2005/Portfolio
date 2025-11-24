@@ -448,5 +448,9 @@ section
     {
         font-size: 1vmin;
     }
+    .contact-form input , .contact-form textarea
+    {
+        border: 0.5vmin solid whitesmoke;
+    }
 
 }
