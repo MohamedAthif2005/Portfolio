@@ -255,14 +255,6 @@ section
     transition: 0.3s ease;   
     font-family: "poppins";
 }
-.stagger-1
-{
-    animation-delay: 0.1s;
-}
-.stagger-2
-{
-    transition-delay: 5s;
-}
 #contact
 {
     font-family:  "poppins";
