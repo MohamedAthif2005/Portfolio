@@ -16,7 +16,7 @@ html,body
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    overflow:clip;
+    overflow:hidden;
 }
 @font-face
 {
@@ -199,6 +199,10 @@ section
 {
     font-family:"poppins";
     text-align: center;
+    height: 100vh;
+    overflow-y: auto;        /* enable vertical scroll */
+    overscroll-behavior: contain; /* prevent scroll chaining to body */
+    padding: 5vmin 0;
 }
 .project-title
 {
@@ -208,6 +212,8 @@ section
 .project-container
 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 5vmin;
 }
 .project-card
@@ -444,6 +450,10 @@ section
         backdrop-filter: none;
         background: rgba(255,255,255,0.2);
         border: 0.5vmin solid whitesmoke;
+    }
+    #project
+    {
+        padding-top: 10vmin;
     }
 
 }
